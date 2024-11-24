@@ -737,6 +737,3 @@ if __name__ == '__main__':
             main_title=f'Localization Map after {movement} - sensors',
             img_name=f'{img_folder}/{movement_count}_sensors_localization.png'
         )
-
-
-
