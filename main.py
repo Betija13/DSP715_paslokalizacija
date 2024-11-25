@@ -666,7 +666,6 @@ if __name__ == '__main__':
         main_title=f'Localization Map after start - sensors', img_name=f'{img_folder}/0_sensors_localization.png'
     )
     movement_count = 0
-    movement_count += 1
     random_keys_m = []
     for key_m, prob_m in movement_matrix.items():
         random_keys_m.extend([key_m] * int(prob_m * 10))
@@ -674,6 +673,7 @@ if __name__ == '__main__':
     for key_r, prob_r in rotation_matrix.items():
         random_keys_r.extend([key_r] * int(prob_r * 10))
     while going_on:
+        movement_count += 1
         movement = input("Movement of the robot ['A', 'W', 'D', 'S'] for moving, ['R', 'L'] "
                          "for rotation, '-1' for stop: ")
         if movement in possible_movement:
